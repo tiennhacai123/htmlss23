@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Triangles</title>
+</head>
+<body>
+    <script>
+        function printTriangles() {
+            var numberOfRows = prompt("Nhap vao so hang");
+            numberOfRows = parseInt(numberOfRows);
+            if (isNaN(numberOfRows) || numberOfRows <= 0) {
+                alert("Vui long nhap lai");
+                return;
+            }
+            for (var i = 1; i <= numberOfRows; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+
+            for (var i = numberOfRows; i >= 1; i--) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+        }
+        printTriangles();
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function isPerfectNumber(number) {
+    let sum = 0;
+
+    for (let i = 1; i <= number / 2; i++) {
+        if (number % i === 0) {
+            sum += i;
+        }
+    }
+    return sum === number;
+}
+let number = +prompt("Nhập vào một số:");
+if (!isNaN(number) && number > 0) {
+    if (isPerfectNumber(number)) {
+        console.log("la so hoan hao");
+    } else {
+        console.log(" khong la so hoan hao");
+    }
+} else {
+    console.log("Vui long nhap lai so ");
+}
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let num = +prompt("Nhap vao mot so");
+if (isNaN(num) || num < 0) {
+    console.log("So khong phu hop");
+} else {
+    for (let i = 2; i <= num; i++) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(i);
+        }
+    }
+}
+</script>
+</html>

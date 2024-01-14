@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+let guessCorrectly = false;
+do {
+    let userGuess = +prompt("Nhap vao 1 so");
+    if (!isNaN(userGuess) && userGuess >= 1 && userGuess <= 10) {
+        if (userGuess === randomNumber) {
+            console.log("Ban da doan dung");
+            guessCorrectly = true;
+        } else if (userGuess > randomNumber) {
+            console.log("Lon hon so ngau nhien");
+        } else {
+            console.log("Nho hon so ngau nhien");
+        }
+    } else {
+        console.log("Vui long nhap lai so");
+    }
+}while (!guessCorrectly)
+</script>
+</html>

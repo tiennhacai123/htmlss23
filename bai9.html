@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function fibonacciSequence(n) {
+    let sequence = [0, 1];
+    while (sequence[sequence.length - 1] + sequence[sequence.length - 2] <= n) {
+        let nextValue = sequence[sequence.length - 1] + sequence[sequence.length - 2];
+        sequence.push(nextValue);
+    }
+
+    return sequence;
+}
+function main() {
+    try {
+        let n = parseInt(prompt("Nhap vao mot so"));
+        if (isNaN(n) || n <= 0) {
+            console.log("Nhap lai so khac");
+            return;
+        }
+        let fibonacciSeq = fibonacciSequence(n);
+        console.log(`Day fibonaci co tong nho hon ${n}:`);
+        console.log(fibonacciSeq);
+    } catch (error) {
+        console.log("Thu lai");
+    }
+}
+main();
+</script>
+</html>
